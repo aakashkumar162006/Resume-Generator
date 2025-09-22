@@ -24,7 +24,7 @@ while True:
 # 4. Education
 degree = input("\nDegree / Course: ")
 institution = input("Institution: ")
-grad_year = input("Year of Graduation: ")
+grad_year = int(input("Year of Graduation: "))
 
 # 5. Work Experience / Projects
 projects = []
@@ -47,41 +47,40 @@ while True:
 print("\nAll inputs collected successfully!")
 
 # Generate the markdown content
-resume_md = f"""# {name}
+resume_md = f"""# Resume
 
-**{job_title}**
+**Job Title:** {job_title}
 
+### Personal Info
+- Name: {name}
 - Email: {email}
 - Phone: {phone}
-- LinkedIn: {linkedin}
+- LinkedIn: [{linkedin}]({linkedin})
 
 ---
 
-## Summary
-
+### Summary
 {summary}
 
 ---
 
-## Skills
-
-{', '.join(skills)}
-
----
-
-## Education
-
-**{degree}**, {institution} ({grad_year})
+### Skills
+- {"\n- ".join(skills)}
 
 ---
 
-## Work Experience / Projects
+### Education
+Pursued **{degree}** in *{institution}* from {grad_year-4} to {grad_year}
+
+---
+
+### Work Experience / Projects
 """
 
 for proj in projects:
-    resume_md += f"\n### {proj['title']} - {proj['org']}"
+    resume_md += f"\n#### {proj['title']} - {proj['org']}"
     if proj['duration']:
-        resume_md += f" ({proj['duration']})"
+        resume_md += f" (*{proj['duration']}*)"
     resume_md += f"\n{proj['desc']}\n"
 
 # Write to Resume.md
@@ -89,4 +88,3 @@ with open("Resume.md", "w", encoding="utf-8") as f:
     f.write(resume_md)
 
 print("\nResume.md has been generated in this folder!")
-
