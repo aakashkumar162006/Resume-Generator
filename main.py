@@ -22,7 +22,18 @@ while True:
     skills.append(skill)
 
 # 4. Education
-degree = input("\nDegree / Course: ")
+education=[]
+while True:
+    institute = input("\nSchool / College(type 'done' when finished): ")
+    if institute.lower() == "done":
+        break
+    if institute.lower() == "school":
+        sslc_year=input("Year of SSLC: ")
+        ins_name=input("School Name: ")
+        hsc_year=input("Year of HSC: ")
+        ins_name=input("School Name: ")
+    elif institute.lower() == "college":
+        degree = input("\nDegree / Course: ")
 institution = input("Institution: ")
 grad_year = int(input("Year of Graduation: "))
 
