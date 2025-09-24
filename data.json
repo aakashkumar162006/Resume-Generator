@@ -1,0 +1,34 @@
+{
+  "name": "Aakash Kumar",
+  "job_title": "Software Developer",
+  "email": "aakash@example.com",
+  "phone": "9876543210",
+  "linkedin": "https://linkedin.com/in/aakash",
+  "summary": "I am a passionate developer who loves coding, gaming, and exploring new tech.",
+  "skills": ["Python", "C", "HTML", "CSS", "Git"],
+  "schools": {
+    "sslc": { "year": "2020", "name": "ABC High School" },
+    "hsc": { "year": "2022", "name": "XYZ Higher Secondary" }
+  },
+  "degrees": [
+    {
+      "degree": "B.E. CSE",
+      "institution": "Sri Sairam Engineering College",
+      "grad_year": "2026"
+    }
+  ],
+  "projects": [
+    {
+      "title": "Voice Recognition System",
+      "org": "EA Technologies",
+      "duration": "2 months",
+      "desc": "Created a voice recognition system using Python and ML libraries."
+    },
+    {
+      "title": "Portfolio Website",
+      "org": "Personal Project",
+      "duration": "",
+      "desc": "Built a personal portfolio using HTML, CSS, and JS."
+    }
+  ]
+}
