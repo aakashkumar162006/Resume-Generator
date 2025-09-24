@@ -1,4 +1,5 @@
 import json
+import pypandoc
 
 print("=== Welcome to Resume Generator ===\n")
 
@@ -88,43 +89,27 @@ print("\nAll inputs collected successfully!")
 # ===== Generate Markdown =====
 resume_md = f"""# Resume
 
-
 #### **Job Title:** {job_title}
 
-
 ### Personal Info
-
-
 - **Name:** {name}
 - **Email:** {email}
 - **Phone:** {phone}
 - **LinkedIn:** [{linkedin}]({linkedin})
 
-
 ---
-
 
 ### Summary
-
-
 {summary}
 
-
 ---
-
 
 ### Skills
-
-
 - {"\n- ".join(skills)}
-
 
 ---
 
-
 ### Education
-
-
 """
 
 if schools:
@@ -134,7 +119,7 @@ if schools:
 for d in degrees:
     resume_md += f"\n- **{d['degree']}**, {d['institution']} ({d['grad_year']})\n"
 
-resume_md += "\n\n---\n\n\n\n### Work Experience / Projects\n\n"
+resume_md += "\n---\n\n### Work Experience / Projects\n"
 
 for proj in projects:
     resume_md += f"\n##### - {proj['title']} - {proj['org']}"
@@ -147,3 +132,11 @@ with open("Resume.md", "w", encoding="utf-8") as f:
     f.write(resume_md)
 
 print("\n✅ Resume.md has been generated in this folder!")
+
+# ===== Convert Markdown to PDF =====
+try:
+    pypandoc.convert_file("Resume.md", "pdf", outputfile="Resume.pdf", extra_args=['--standalone'])
+    print("✅ Resume.pdf has been generated in this folder!")
+except Exception as e:
+    print("⚠️ PDF generation failed:", e)
+    print("Make sure Pandoc is installed and added to your system PATH.")
