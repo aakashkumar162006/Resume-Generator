@@ -91,8 +91,8 @@ else:
         cert_name=input("Certificate / Certificate Name(type 'done' when finished): ")
         if cert_name.lower() == "done":
             break
-        cert_academy=input("The Academy or Institution that provided it: ").capitalize()
-        certificates.append({cert_name.capitalize(): cert_academy})
+        cert_academy=input("The Academy or Institution that provided it: ")
+        certificates.append({'name':cert_name.capitalize(),'provider':cert_academy.capitalize()})
 
 
 print("\nAll inputs collected successfully!")
