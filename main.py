@@ -21,6 +21,7 @@ if use_json:
     schools = data.get("schools", {})
     degrees = data.get("degrees", [])
     projects = data.get("projects", [])
+    certificates = data.get("certifications", [])
 
 else:
     # === Manual Input Collection ===
@@ -84,6 +85,16 @@ else:
             "desc": desc
         })
 
+    #Certifications
+    certificates=[]
+    while True:
+        cert_name=input("Certificate / Certificate Name(type 'done' when finished): ")
+        if cert_name.lower() == "done":
+            break
+        cert_academy=input("The Academy or Institution that provided it: ").capitalize()
+        certificates.append({cert_name.capitalize(): cert_academy})
+
+
 print("\nAll inputs collected successfully!")
 
 # ===== Generate Markdown =====
@@ -126,6 +137,14 @@ for proj in projects:
     if proj['duration']:
         resume_md += f" (*{proj['duration']}*)"
     resume_md += f"\n    {proj['desc']}\n"
+
+
+resume_md += "\n---\n\n### Certifications\n"
+
+for cert in certificates:
+    resume_md+=f"\n\n - {cert['name']} ({cert['provider']})"
+
+
 
 # Write to Resume.md
 with open("Resume.md", "w", encoding="utf-8") as f:

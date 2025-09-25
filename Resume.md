@@ -1,17 +1,17 @@
 # Resume
 
-#### **Job Title:** Software Developer
+#### **Job Title:** Senior Developer
 
 ### Personal Info
-- **Name:** Aakash Kumar
-- **Email:** aakash@example.com
+- **Name:** Aakash
+- **Email:** aakash@gmail.com
 - **Phone:** 9876543210
-- **LinkedIn:** [https://linkedin.com/in/aakash](https://linkedin.com/in/aakash)
+- **LinkedIn:** [https://www.linkedin.com/aakash/](https://www.linkedin.com/aakash/)
 
 ---
 
 ### Summary
-I am a passionate developer who loves coding, gaming, and exploring new tech.
+Hi, I'm Aakash and I am interested in Coding, Travelling and Gaming.
 
 ---
 
@@ -26,17 +26,23 @@ I am a passionate developer who loves coding, gaming, and exploring new tech.
 
 ### Education
 
-- **SSLC:** ABC High School (2020)
-- **HSC:** XYZ Higher Secondary (2022)
+- **SSLC:** St Joseph MHSS (2022)
+- **HSC:** St Joseph MHSS (2024)
 
-- **B.E. CSE**, Sri Sairam Engineering College (2026)
+- **B.E. CSE(AIML)**, Sri Sairam Institutions (2028)
 
 ---
 
 ### Work Experience / Projects
 
-##### - Voice Recognition System - EA Technologies (*2 months*)
-    Created a voice recognition system using Python and ML libraries.
+##### - Resume Generator Using Python - Self (*2 months*)
+    It's a simple resume generator using Python, that generates a resume and exports it into a PDF.
 
-##### - Portfolio Website - Personal Project
-    Built a personal portfolio using HTML, CSS, and JS.
+---
+
+### Certifications
+
+
+ - Foundations to Python (GitHub Learn)
+
+ - Cloud Services in AWS (AWS)

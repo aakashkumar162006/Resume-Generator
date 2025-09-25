@@ -1,34 +1,50 @@
 {
-  "name": "Aakash Kumar",
-  "job_title": "Software Developer",
-  "email": "aakash@example.com",
-  "phone": "9876543210",
-  "linkedin": "https://linkedin.com/in/aakash",
-  "summary": "I am a passionate developer who loves coding, gaming, and exploring new tech.",
-  "skills": ["Python", "C", "HTML", "CSS", "Git"],
-  "schools": {
-    "sslc": { "year": "2020", "name": "ABC High School" },
-    "hsc": { "year": "2022", "name": "XYZ Higher Secondary" }
-  },
-  "degrees": [
-    {
-      "degree": "B.E. CSE",
-      "institution": "Sri Sairam Engineering College",
-      "grad_year": "2026"
-    }
-  ],
-  "projects": [
-    {
-      "title": "Voice Recognition System",
-      "org": "EA Technologies",
-      "duration": "2 months",
-      "desc": "Created a voice recognition system using Python and ML libraries."
+    "name": "Aakash",
+    "job_title": "Senior Developer",
+    "email": "aakash@gmail.com",
+    "phone": "9876543210",
+    "linkedin": "https://www.linkedin.com/aakash/",
+    "summary": "Hi, I'm Aakash and I am interested in Coding, Travelling and Gaming.",
+    "skills": [
+        "Python",
+        "C",
+        "HTML",
+        "CSS",
+        "Git"
+    ],
+    "schools": {
+        "sslc": {
+            "year": "2022",
+            "name": "St Joseph MHSS"
+        },
+        "hsc": {
+            "year": "2024",
+            "name": "St Joseph MHSS"
+        }
     },
-    {
-      "title": "Portfolio Website",
-      "org": "Personal Project",
-      "duration": "",
-      "desc": "Built a personal portfolio using HTML, CSS, and JS."
-    }
-  ]
+    "degrees": [
+        {
+            "degree": "B.E. CSE(AIML)",
+            "institution": "Sri Sairam Institutions",
+            "grad_year": "2028"
+        }
+    ],
+    "projects": [
+        {
+            "title": "Resume Generator Using Python",
+            "org": "Self",
+            "duration": "2 months",
+            "desc": "It's a simple resume generator using Python, that generates a resume and exports it into a PDF."
+        }
+    ],
+    "certifications": [
+        {
+            "name": "Foundations to Python",
+            "provider": "GitHub Learn"
+        },
+        {
+            "name": "Cloud Services in AWS",
+            "provider": "AWS"
+        }
+    ]
 }
