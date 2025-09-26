@@ -24,6 +24,7 @@ if use_json:
     certificates = data.get("certifications", [])
 
 else:
+
     # === Manual Input Collection ===
     name = input("Full Name: ")
     job_title = input("Job Title / Role: ")
@@ -94,6 +95,25 @@ else:
         cert_academy=input("The Academy or Institution that provided it: ")
         certificates.append({'name':cert_name.capitalize(),'provider':cert_academy.capitalize()})
 
+#Updating JSON File
+# Auto-save data only if we used manual input
+if not use_json:
+    with open("data.json", "w", encoding="utf-8") as f:
+        json.dump({
+            "name": name,
+            "job_title": job_title,
+            "email": email,
+            "phone": phone,
+            "linkedin": linkedin,
+            "summary": summary,
+            "skills": skills,
+            "schools": schools,
+            "degrees": degrees,
+            "projects": projects,
+            "certifications": certificates
+        }, f, indent=4)
+    print("💾 Data saved to data.json!")
+
 
 print("\nAll inputs collected successfully!")
 
@@ -133,10 +153,10 @@ for d in degrees:
 resume_md += "\n---\n\n### Work Experience / Projects\n"
 
 for proj in projects:
-    resume_md += f"\n##### - {proj['title']} - {proj['org']}"
+    resume_md += f"\n- **{proj['title']}** ({proj['org']}) "
     if proj['duration']:
         resume_md += f" (*{proj['duration']}*)"
-    resume_md += f"\n    {proj['desc']}\n"
+    resume_md += f" : \n{proj['desc']}\n"
 
 
 resume_md += "\n---\n\n### Certifications\n"
@@ -151,6 +171,7 @@ with open("Resume.md", "w", encoding="utf-8") as f:
     f.write(resume_md)
 
 print("\n✅ Resume.md has been generated in this folder!")
+
 
 # ===== Convert Markdown to PDF =====
 try:

@@ -1,17 +1,17 @@
 # Resume
 
-#### **Job Title:** Senior Developer
+#### **Job Title:** Cloud Engineer
 
 ### Personal Info
 - **Name:** Aakash
-- **Email:** aakash@gmail.com
+- **Email:** aakash@hotmail.com
 - **Phone:** 9876543210
 - **LinkedIn:** [https://www.linkedin.com/aakash/](https://www.linkedin.com/aakash/)
 
 ---
 
 ### Summary
-Hi, I'm Aakash and I am interested in Coding, Travelling and Gaming.
+Hi, I'm Aakash , I'm currently studying CSE(AIML) II Year. My hobbies are Coding, Gaming and Sleeping.
 
 ---
 
@@ -21,28 +21,31 @@ Hi, I'm Aakash and I am interested in Coding, Travelling and Gaming.
 - HTML
 - CSS
 - Git
+- AWS
 
 ---
 
 ### Education
 
-- **SSLC:** St Joseph MHSS (2022)
-- **HSC:** St Joseph MHSS (2024)
+- **SSLC:** St Joseph's MHSS (2022)
+- **HSC:** St Joseph's MHSS (2024)
 
-- **B.E. CSE(AIML)**, Sri Sairam Institutions (2028)
+- **B.E. CSE(AIML)**, Sri Sairam Engineering College (2028)
 
 ---
 
 ### Work Experience / Projects
 
-##### - Resume Generator Using Python - Self (*2 months*)
-    It's a simple resume generator using Python, that generates a resume and exports it into a PDF.
+- **Resume Generator** (Self Project)  (*2 months*) : 
+It's a minimal resume generator using python , that generates your resume based on your inputs and exports it into a pdf.
 
 ---
 
 ### Certifications
 
 
- - Foundations to Python (GitHub Learn)
+ - Aws certified cloud engineer (Aws(amazon web services))
 
- - Cloud Services in AWS (AWS)
+ - Foundations of git & github (Github learn)
+
+ - Advanced cloud computing (Ibm)
