@@ -1,4 +1,5 @@
 import json
+import datetime
 import pypandoc
 
 print("=== Welcome to Resume Generator ===\n")
@@ -6,6 +7,7 @@ print("=== Welcome to Resume Generator ===\n")
 # Ask user if they want to load data from JSON
 use_json = input("Load data from data.json? (y/n): ").lower() == "y"
 
+# === Loading Data From JSON ===
 if use_json:
     with open("data.json", "r", encoding="utf-8") as f:
         data = json.load(f)
@@ -93,10 +95,9 @@ else:
         if cert_name.lower() == "done":
             break
         cert_academy=input("The Academy or Institution that provided it: ")
-        certificates.append({'name':cert_name.capitalize(),'provider':cert_academy.capitalize()})
+        certificates.append({'name':cert_name,'provider':cert_academy})
 
-#Updating JSON File
-# Auto-save data only if we used manual input
+# Auto-save data to JSON only if we used manual input
 if not use_json:
     with open("data.json", "w", encoding="utf-8") as f:
         json.dump({
@@ -153,20 +154,18 @@ for d in degrees:
 resume_md += "\n---\n\n### Work Experience / Projects\n"
 
 for proj in projects:
-    resume_md += f"\n- **{proj['title']}** ({proj['org']}) "
+    resume_md += f"\n#### {proj['title']} — {proj['org']}"
     if proj['duration']:
         resume_md += f" (*{proj['duration']}*)"
-    resume_md += f" : \n{proj['desc']}\n"
-
+    resume_md += f"\n{proj['desc']}\n"
 
 resume_md += "\n---\n\n### Certifications\n"
-
 for cert in certificates:
     resume_md+=f"\n\n - {cert['name']} ({cert['provider']})"
 
 
 
-# Write to Resume.md
+#=== Write to Resume.md ===
 with open("Resume.md", "w", encoding="utf-8") as f:
     f.write(resume_md)
 
@@ -175,8 +174,10 @@ print("\n✅ Resume.md has been generated in this folder!")
 
 # ===== Convert Markdown to PDF =====
 try:
-    pypandoc.convert_file("Resume.md", "pdf", outputfile="Resume.pdf", extra_args=['--standalone'])
-    print("✅ Resume.pdf has been generated in this folder!")
+    pdf_name = f"Resume_{datetime.datetime.now().strftime('%Y%m%d_%H%M%S')}.pdf"
+    pypandoc.convert_file("Resume.md", "pdf", outputfile=pdf_name, extra_args=['--standalone'])
+    print(f"✅ {pdf_name} has been generated in this folder!")
+
 except Exception as e:
     print("⚠️ PDF generation failed:", e)
     print("Make sure Pandoc is installed and added to your system PATH.")

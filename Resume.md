@@ -36,7 +36,7 @@ Hi, I'm Aakash , I'm currently studying CSE(AIML) II Year. My hobbies are Coding
 
 ### Work Experience / Projects
 
-- **Resume Generator** (Self Project)  (*2 months*) : 
+#### Resume Generator — Self Project (*2 months*)
 It's a minimal resume generator using python , that generates your resume based on your inputs and exports it into a pdf.
 
 ---
